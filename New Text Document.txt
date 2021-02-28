@@ -1,0 +1,8 @@
+Data Ware house 
+https://www.dremio.com/data-lake/data-warehouse/
+
+Tableau architecture
+https://data-flair.training/blogs/tableau-architecture/
+
+Tableau Components
+https://data-flair.training/blogs/tableau-tutorial-for-beginners/
