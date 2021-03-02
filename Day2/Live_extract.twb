@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20201.20.0326.1623                               -->
+<workbook original-version='18.1' source-build='2020.1.2 (20201.20.0326.1623)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Data_set_1' inline='true' name='federated.1g9b06s1ipl1q819dlsh11nsked2' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Data_set_1' name='textscan.1j02y0f0k6c7ta125rmm41u7nody'>
+            <connection class='textscan' directory='E:/Machine learning/Tableau Training_WF/Day2' filename='Data_set_1.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1j02y0f0k6c7ta125rmm41u7nody' name='Data_set_1.csv' table='[Data_set_1#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='ID' ordinal='0' />
+            <column datatype='string' name='NAME' ordinal='1' />
+            <column datatype='date' name='DATE' ordinal='2' />
+            <column datatype='integer' name='SALE' ordinal='3' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Data_set_1.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[Data_set_1.csv]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NAME]</local-name>
+            <parent-name>[Data_set_1.csv]</parent-name>
+            <remote-alias>NAME</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DATE</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[DATE]</local-name>
+            <parent-name>[Data_set_1.csv]</parent-name>
+            <remote-alias>DATE</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SALE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SALE]</local-name>
+            <parent-name>[Data_set_1.csv]</parent-name>
+            <remote-alias>SALE</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Date' datatype='date' name='[DATE]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+      <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Sale' datatype='integer' name='[SALE]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/Harika/Documents/My Tableau Repository/Datasources/Data_set_1.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='03/02/2021 02:55:23 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='Data_set_1' increment-value='%null%' refresh-type='create' rows-inserted='5' timestamp-start='2021-03-02 14:55:23.310' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Data_set_1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NAME</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[NAME]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NAME</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Data_set_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DATE</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[DATE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DATE</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Data_set_1.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SALE</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[SALE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SALE</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Data_set_1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+        <filter class='categorical' column='[NAME]'>
+          <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+            <groupfilter function='level-members' level='[NAME]' />
+            <groupfilter function='member' level='[NAME]' member='&quot;Susan&quot;' />
+          </groupfilter>
+        </filter>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.522822' measure-ordering='alphabetic' measure-percentage='0.477178' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data_set_1' name='federated.1g9b06s1ipl1q819dlsh11nsked2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1g9b06s1ipl1q819dlsh11nsked2'>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+            <column caption='Sale' datatype='integer' name='[SALE]' role='measure' type='quantitative' />
+            <column-instance column='[ID]' derivation='None' name='[none:ID:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[NAME]' derivation='None' name='[none:NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SALE]' derivation='Sum' name='[sum:SALE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1g9b06s1ipl1q819dlsh11nsked2].[sum:SALE:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1g9b06s1ipl1q819dlsh11nsked2].[none:ID:ok] / [federated.1g9b06s1ipl1q819dlsh11nsked2].[none:NAME:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{40D9655C-54DF-444D-8840-A23ED1C8B8A6}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1g9b06s1ipl1q819dlsh11nsked2].[none:ID:ok]</field>
+            <field>[federated.1g9b06s1ipl1q819dlsh11nsked2].[none:NAME:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{93F344F8-E2A8-4898-BA7E-490BC61DE5CE}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='104' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
