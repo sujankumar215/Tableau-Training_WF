@@ -1,0 +1,6 @@
+cd E:\Sujan_Learning\flask
+e:
+py -m venv env
+.\env\Scripts\activate
+code .
+
